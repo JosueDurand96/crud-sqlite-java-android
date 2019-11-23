@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +17,7 @@ public class Adapter extends BaseAdapter {
     Contacto contacto;
     Activity activity;
 
-    public Adapter(ArrayList<Contacto> lista, Activity activity, DaoContacto daoContacto) {
+    public Adapter(Activity activity, ArrayList<Contacto> lista, DaoContacto daoContacto) {
         this.lista = lista;
         this.activity = activity;
         this.daoContacto = daoContacto;
@@ -46,17 +45,17 @@ public class Adapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         View v = view;
-        if (v!=null){
-            LayoutInflater layoutInflater =(LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v=layoutInflater.inflate(R.layout.item,null);
+        if (v != null) {
+            LayoutInflater layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            v = layoutInflater.inflate(R.layout.item, null);
         }
-        contacto=lista.get(position);
-        TextView txtnombre=(TextView)view.findViewById(R.id.item_nombre);
-        TextView txttelefono=(TextView)view.findViewById(R.id.item_telefono);
-        TextView txtemail=(TextView)view.findViewById(R.id.item_email);
-        TextView txtedad=(TextView)view.findViewById(R.id.item_edad);
-        ImageView btneditar=(ImageView)view.findViewById(R.id.item_btneditar);
-        ImageView btnEliminar=(ImageView)view.findViewById(R.id.item_btneliminar);
+        contacto = lista.get(position);
+        TextView txtnombre = (TextView) view.findViewById(R.id.item_nombre);
+        TextView txttelefono = (TextView) view.findViewById(R.id.item_telefono);
+        TextView txtemail = (TextView) view.findViewById(R.id.item_email);
+        TextView txtedad = (TextView) view.findViewById(R.id.item_edad);
+        ImageView btneditar = (ImageView) view.findViewById(R.id.item_btneditar);
+        ImageView btnEliminar = (ImageView) view.findViewById(R.id.item_btneliminar);
         txtnombre.setText(contacto.nombre);
         txttelefono.setText(contacto.telefono);
         txtemail.setText(contacto.email);
@@ -67,8 +66,12 @@ public class Adapter extends BaseAdapter {
 
             }
         });
+        btnEliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
+            }
+        });
 
 
         return v;
