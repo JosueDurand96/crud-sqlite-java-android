@@ -6,25 +6,25 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/dialogo_nombre"
         android:text="Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/telefono"
+        android:id="@+id/dialogo_telefono"
         android:text="Telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/dialogo_email"
         android:text="Correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/edad"
+        android:id="@+id/dialogo_edad"
         android:text="Edad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -36,7 +36,7 @@
     android:layout_height="wrap_content">
 
     <Button
-        android:id="@+id/d_agregar"
+        android:id="@+id/dialogo_agregar"
         android:text="Agregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -44,7 +44,7 @@
     </Button>
 
     <Button
-        android:id="@+id/d_cancelar"
+        android:id="@+id/dialogo_cancelar"
         android:text="Cancelar"
         android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"

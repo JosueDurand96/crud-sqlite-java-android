@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setTitle("Nuevo Registro");
                 dialog.setCancelable(true);
+                dialog.setContentView(R.layout.dialogo);
 
             }
         });
