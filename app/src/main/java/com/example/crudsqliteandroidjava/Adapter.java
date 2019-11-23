@@ -28,14 +28,14 @@ public class Adapter extends BaseAdapter {
 
     @Override
     public Contacto getItem(int position) {
-        contacto=lista.get(position);
+        contacto = lista.get(position);
         return null;
     }
 
     @Override
     public long getItemId(int position) {
-
-        return 0;
+        contacto = lista.get(position);
+        return contacto.getId();
     }
 
     @Override
