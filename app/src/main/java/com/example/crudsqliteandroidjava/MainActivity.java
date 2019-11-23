@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         imgAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog dialog = new Dialog(MainActivity.this);
+                final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setTitle("Nuevo Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
@@ -66,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                                     dialogo_telefono.getText().toString(),
                                     dialogo_email.getText().toString(),
                                     Integer.parseInt(dialogo_edad.getText().toString()));
+
+                            daoContacto.insertar(contacto);
+                            adapter.notifyDataSetChanged();
+                            dialog.dismiss();
                         } catch (Exception e) {
                             Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
                         }
