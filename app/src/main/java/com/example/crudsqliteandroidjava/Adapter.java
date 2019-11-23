@@ -56,6 +56,12 @@ public class Adapter extends BaseAdapter {
         TextView txtemail=(TextView)view.findViewById(R.id.item_email);
         TextView txtedad=(TextView)view.findViewById(R.id.item_edad);
         ImageView btneditar=(ImageView)view.findViewById(R.id.item_btneditar);
+        ImageView btnEliminar=(ImageView)view.findViewById(R.id.item_btneliminar);
+        txtnombre.setText(contacto.nombre);
+        txttelefono.setText(contacto.telefono);
+        txtemail.setText(contacto.email);
+        txtedad.setText(contacto.edad);
+
 
 
 
