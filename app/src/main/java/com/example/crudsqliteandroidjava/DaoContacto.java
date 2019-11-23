@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-public class daoContacto {
+public class DaoContacto {
     SQLiteDatabase sqLiteDatabase;
     ArrayList<Contacto> lista;
     Contacto contacto;
@@ -13,7 +13,7 @@ public class daoContacto {
     String nombreDB = "BDContactos";
     String tabla = "create table if not exists contacto(id integer primary key autoincrement, nombre text, telefono text, email text, edad integer)";
 
-    public daoContacto(Context ctx) {
+    public DaoContacto(Context ctx) {
         this.context = ctx;
         sqLiteDatabase = ctx.openOrCreateDatabase(nombreDB, Context.MODE_WORLD_WRITEABLE, null);
         sqLiteDatabase.execSQL(tabla);
