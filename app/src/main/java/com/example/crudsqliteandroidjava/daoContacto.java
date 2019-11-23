@@ -32,8 +32,12 @@ public class daoContacto {
         return true;
     }
 
-    public ArrayList<Contacto> verTodos(){
+    public ArrayList<Contacto> verTodos() {
         return lista;
+    }
+
+    public Contacto verUno(int id) {
+        return contacto;
     }
 
 }
