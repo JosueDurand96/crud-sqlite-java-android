@@ -61,7 +61,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         try {
-
+                            contacto = new Contacto(
+                                    dialogo_nombre.getText().toString(),
+                                    dialogo_telefono.getText().toString(),
+                                    dialogo_email.getText().toString(),
+                                    Integer.parseInt(dialogo_edad.getText().toString()));
                         } catch (Exception e) {
                             Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
                         }
