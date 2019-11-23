@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Adapter adapter;
     ArrayList<Contacto> lista;
     Contacto contacto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 dialogo_agregar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        try {
 
+                        } catch (Exception e) {
+                            Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
 
