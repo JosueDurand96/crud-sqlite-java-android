@@ -2,13 +2,14 @@ package com.example.crudsqliteandroidjava;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
 public class DaoContacto {
     SQLiteDatabase sqLiteDatabase;
-    ArrayList<Contacto> lista= new ArrayList<Contacto>();
+    ArrayList<Contacto> lista = new ArrayList<Contacto>();
     Contacto contacto;
     Context context;
     String nombreDB = "BDContactos";
@@ -40,6 +41,8 @@ public class DaoContacto {
     }
 
     public ArrayList<Contacto> verTodos() {
+        lista.clear();
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from contacto", null);
         return lista;
     }
 
