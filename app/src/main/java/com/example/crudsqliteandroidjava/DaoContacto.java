@@ -22,11 +22,12 @@ public class DaoContacto {
 
     public boolean insertar(Contacto contacto) {
         ContentValues content = new ContentValues();
-        content.put("nombre", contacto.nombre);
-        content.put("telefono", contacto.telefono);
-        content.put("email",contacto.email);
+        content.put("nombre", contacto.getNombre());
+        content.put("telefono", contacto.getEmail());
+        content.put("email", contacto.getEmail());
+        content.put("edad", contacto.getEdad());
+        return (sqLiteDatabase.insert("contacto", null, content)) > 0;
 
-        return true;
     }
 
     public boolean eliminar(int id) {
