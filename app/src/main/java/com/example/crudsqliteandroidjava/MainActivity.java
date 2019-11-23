@@ -8,13 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import androidx.annotation.ContentView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.DialogCompat;
 import androidx.fragment.app.DialogFragment;
-import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
@@ -48,18 +44,19 @@ public class MainActivity extends AppCompatActivity {
         imgAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(MainActivity.this);
+                DialogFragment vm;
+                Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setTitle("Nuevo Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
-                dialog.show();
-                final EditText dialogo_nombre = (EditText) findViewById(R.id.dialogo_nombre);
-                final EditText dialogo_telefono = (EditText) findViewById(R.id.dialogo_telefono);
-                final EditText dialogo_email = (EditText) findViewById(R.id.dialogo_email);
-                final EditText dialogo_edad = (EditText) findViewById(R.id.dialogo_edad);
 
-                Button dialogo_agregar = (Button) findViewById(R.id.dialogo_agregar);
-                Button dialogo_cancelar = (Button) findViewById(R.id.dialogo_cancelar);
+                dialog.show();
+                final EditText dialogo_nombre = (EditText) dialog.findViewById(R.id.dialogo_nombre);
+                final EditText dialogo_telefono = (EditText) dialog.findViewById(R.id.dialogo_telefono);
+                final EditText dialogo_email = (EditText) dialog.findViewById(R.id.dialogo_email);
+                final EditText dialogo_edad = (EditText) dialog.findViewById(R.id.dialogo_edad);
+                final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
+                final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
 
 //                dialog.dialogo_agregar.setOnClickListener(new View.OnClickListener() {
 //                    @Override
