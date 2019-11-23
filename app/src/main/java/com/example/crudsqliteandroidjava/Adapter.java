@@ -1,5 +1,6 @@
 package com.example.crudsqliteandroidjava;
 
+import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,6 +10,12 @@ import java.util.ArrayList;
 public class Adapter extends BaseAdapter {
     ArrayList<Contacto> lista;
     DaoContacto daoContacto;
+    Contacto contacto;
+    Activity activity;
+
+    public Adapter(ArrayList<Contacto>lista,Activity activity, DaoContacto daoContacto){
+
+    }
 
 
     @Override
