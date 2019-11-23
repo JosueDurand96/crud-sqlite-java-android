@@ -52,8 +52,22 @@ public class MainActivity extends AppCompatActivity {
                 EditText dialogo_email = (EditText) findViewById(R.id.dialogo_email);
                 EditText dialogo_edad = (EditText) findViewById(R.id.dialogo_edad);
 
-                Button dialogo_agregar =(Button)findViewById(R.id.dialogo_agregar);
-                Button dialogo_cancelar =(Button)findViewById(R.id.dialogo_cancelar);
+                Button dialogo_agregar = (Button) findViewById(R.id.dialogo_agregar);
+                Button dialogo_cancelar = (Button) findViewById(R.id.dialogo_cancelar);
+
+                dialogo_agregar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+
+                dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
             }
         });
 
