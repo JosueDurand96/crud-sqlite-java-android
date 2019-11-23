@@ -1,6 +1,7 @@
 package com.example.crudsqliteandroidjava;
 
 import android.os.Bundle;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         daoContacto = new DaoContacto(this);
         lista=daoContacto.verTodos();
-        adapter
+        adapter= new Adapter(this,lista,daoContacto);
+
+        ListView lstContacto=(ListView)findViewById(R.id.lstContacto);
 
 
     }
