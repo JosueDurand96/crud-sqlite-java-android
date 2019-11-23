@@ -22,8 +22,9 @@ public class DaoContacto {
 
     public boolean insertar(Contacto contacto) {
         ContentValues content = new ContentValues();
-        content.put("nombre",contacto.nombre);
-        content.put("telefono",contacto.telefono);
+        content.put("nombre", contacto.nombre);
+        content.put("telefono", contacto.telefono);
+        content.put("email",contacto.email);
 
         return true;
     }
