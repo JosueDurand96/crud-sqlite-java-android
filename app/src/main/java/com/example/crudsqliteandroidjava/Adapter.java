@@ -34,6 +34,7 @@ public class Adapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
+
         return 0;
     }
 
