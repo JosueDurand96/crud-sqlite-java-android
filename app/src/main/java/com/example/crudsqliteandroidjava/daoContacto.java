@@ -23,4 +23,8 @@ public class daoContacto {
         return true;
     }
 
+    public boolean eliminar(int id){
+        return true;
+    }
+
 }
