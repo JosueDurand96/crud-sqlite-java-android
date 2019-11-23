@@ -1,6 +1,8 @@
 package com.example.crudsqliteandroidjava;
 
 import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -42,7 +44,7 @@ public class Adapter extends BaseAdapter {
     public View getView(int position, View view, ViewGroup parent) {
         View v = view;
         if (v!=null){
-
+            LayoutInflater layoutInflater =(LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         return null;
     }
