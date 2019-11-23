@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+
+    <TextView
+        android:id="@+id/t_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre" />
+
+    <TextView
+        android:id="@+id/t_edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edad" />
+
+
+    <TextView
+        android:id="@+id/t_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefono" />
+
+    <TextView
+        android:id="@+id/t_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email" />
+
+    <Button
+        android:id="@+id/cerrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar" />
 </LinearLayout>
