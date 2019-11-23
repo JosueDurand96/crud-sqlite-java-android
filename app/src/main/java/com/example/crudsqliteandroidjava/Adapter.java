@@ -39,7 +39,11 @@ public class Adapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View view, ViewGroup parent) {
+        View v = view;
+        if (v!=null){
+
+        }
         return null;
     }
 }
