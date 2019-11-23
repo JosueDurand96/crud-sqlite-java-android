@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        dialog.dismiss();
                     }
                 });
             }
