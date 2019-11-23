@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        daoContacto = new DaoContacto(this);
+        daoContacto = new DaoContacto(MainActivity.this);
         lista = daoContacto.verTodos();
         adapter = new Adapter(this, lista, daoContacto);
 
         ListView lstContacto = (ListView) findViewById(R.id.lstContacto);
 
-        ImageView imgAgregar =(ImageView)findViewById(R.id.imgAgregar);
+        ImageView imgAgregar = (ImageView) findViewById(R.id.imgAgregar);
 
         lstContacto.setAdapter(adapter);
         lstContacto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
