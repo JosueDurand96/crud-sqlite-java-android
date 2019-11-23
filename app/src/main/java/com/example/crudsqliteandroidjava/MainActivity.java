@@ -46,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
                 dialog.show();
-                EditText nombre = (EditText)findViewById(R.id.dialogo_nombre);
+                EditText dialogo_nombre = (EditText) findViewById(R.id.dialogo_nombre);
+                EditText dialogo_telefono = (EditText) findViewById(R.id.dialogo_telefono);
+                EditText dialogo_email = (EditText) findViewById(R.id.dialogo_email);
+                EditText dialogo_edad = (EditText) findViewById(R.id.dialogo_edad);
 
             }
         });
