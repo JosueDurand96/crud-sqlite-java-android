@@ -43,6 +43,16 @@ public class DaoContacto {
     public ArrayList<Contacto> verTodos() {
         lista.clear();
         Cursor cursor = sqLiteDatabase.rawQuery("select * from contacto", null);
+        if (cursor!=null&&cursor.getCount()>0){
+            cursor.moveToFirst();
+            do {
+                lista.add(new Contacto(cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getInt(4)));
+            }while (cursor.moveToFirst());
+        }
         return lista;
     }
 
