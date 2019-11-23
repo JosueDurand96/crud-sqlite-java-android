@@ -23,7 +23,12 @@ public class daoContacto {
         return true;
     }
 
-    public boolean eliminar(int id){
+    public boolean eliminar(int id) {
+        return true;
+    }
+
+
+    public boolean editar(Contacto contacto) {
         return true;
     }
 
