@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         daoContacto = new DaoContacto(this);
-        lista=daoContacto.verTodos();
-        adapter= new Adapter(this,lista,daoContacto);
+        lista = daoContacto.verTodos();
+        adapter = new Adapter(this, lista, daoContacto);
 
-        ListView lstContacto=(ListView)findViewById(R.id.lstContacto);
+        ListView lstContacto = (ListView) findViewById(R.id.lstContacto);
 
 
     }
