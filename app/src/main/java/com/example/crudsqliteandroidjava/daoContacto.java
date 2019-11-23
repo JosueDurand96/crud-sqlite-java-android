@@ -32,4 +32,8 @@ public class daoContacto {
         return true;
     }
 
+    public ArrayList<Contacto> verTodos(){
+        return lista;
+    }
+
 }
