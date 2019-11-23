@@ -61,6 +61,12 @@ public class Adapter extends BaseAdapter {
         txttelefono.setText(contacto.telefono);
         txtemail.setText(contacto.email);
         txtedad.setText(contacto.edad);
+        btneditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
 
