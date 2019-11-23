@@ -1,5 +1,6 @@
 package com.example.crudsqliteandroidjava;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -20,6 +21,10 @@ public class DaoContacto {
     }
 
     public boolean insertar(Contacto contacto) {
+        ContentValues content = new ContentValues();
+        content.put("nombre",contacto.nombre);
+        content.put("telefono",contacto.telefono);
+
         return true;
     }
 
