@@ -1,5 +1,6 @@
 package com.example.crudsqliteandroidjava;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         imgAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setTitle("Nuevo Registro");
+                dialog.setCancelable(true);
 
             }
         });
