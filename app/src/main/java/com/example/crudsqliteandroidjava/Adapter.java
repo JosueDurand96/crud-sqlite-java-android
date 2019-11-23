@@ -45,21 +45,21 @@ public class Adapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         View v = view;
-        if (v != null) {
+        if (v == null) {
             LayoutInflater layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = layoutInflater.inflate(R.layout.item, null);
         }
         contacto = lista.get(position);
-        TextView txtnombre = (TextView) view.findViewById(R.id.item_nombre);
-        TextView txttelefono = (TextView) view.findViewById(R.id.item_telefono);
-        TextView txtemail = (TextView) view.findViewById(R.id.item_email);
-        TextView txtedad = (TextView) view.findViewById(R.id.item_edad);
-        ImageView btneditar = (ImageView) view.findViewById(R.id.item_btneditar);
-        ImageView btnEliminar = (ImageView) view.findViewById(R.id.item_btneliminar);
+         TextView txtnombre = (TextView) v.findViewById(R.id.item_nombre);
+        TextView txttelefono = (TextView) v.findViewById(R.id.item_telefono);
+        TextView txtemail = (TextView) v.findViewById(R.id.item_email);
+        TextView txtedad = (TextView) v.findViewById(R.id.item_edad);
+        ImageView btneditar = (ImageView) v.findViewById(R.id.item_btneditar);
+        ImageView btnEliminar = (ImageView) v.findViewById(R.id.item_btneliminar);
         txtnombre.setText(contacto.nombre);
         txttelefono.setText(contacto.telefono);
         txtemail.setText(contacto.email);
-        txtedad.setText(contacto.edad);
+        txtedad.setText(""+contacto.edad);
         btneditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

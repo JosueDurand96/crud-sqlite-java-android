@@ -43,7 +43,7 @@ public class DaoContacto {
     public ArrayList<Contacto> verTodos() {
         lista.clear();
         Cursor cursor = sqLiteDatabase.rawQuery("select * from contacto", null);
-        if (cursor!=null&&cursor.getCount()>0){
+        if (cursor != null && cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
                 lista.add(new Contacto(cursor.getInt(0),
@@ -51,12 +51,20 @@ public class DaoContacto {
                         cursor.getString(2),
                         cursor.getString(3),
                         cursor.getInt(4)));
-            }while (cursor.moveToFirst());
+            } while (cursor.moveToNext());
         }
         return lista;
     }
 
-    public Contacto verUno(int id) {
+    public Contacto verUno(int position) {
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from contacto", null);
+        cursor.moveToPosition(position);
+        contacto=new Contacto(cursor.getInt(0),
+                cursor.getString(1),
+                cursor.getString(2),
+                cursor.getString(3),
+                cursor.getInt(4));
+
         return contacto;
     }
 

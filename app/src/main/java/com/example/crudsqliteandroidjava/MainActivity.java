@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                                     Integer.parseInt(dialogo_edad.getText().toString()));
 
                             daoContacto.insertar(contacto);
+                            lista=daoContacto.verTodos();
                             adapter.notifyDataSetChanged();
                             dialog.dismiss();
                         } catch (Exception e) {
