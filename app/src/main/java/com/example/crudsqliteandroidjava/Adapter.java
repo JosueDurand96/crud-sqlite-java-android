@@ -13,7 +13,10 @@ public class Adapter extends BaseAdapter {
     Contacto contacto;
     Activity activity;
 
-    public Adapter(ArrayList<Contacto>lista,Activity activity, DaoContacto daoContacto){
+    public Adapter(ArrayList<Contacto> lista, Activity activity, DaoContacto daoContacto) {
+        this.lista = lista;
+        this.activity = activity;
+        this.daoContacto = daoContacto;
 
     }
 
