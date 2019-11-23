@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setTitle("Nuevo Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
+                dialog.show();
+                EditText nombre = (EditText)findViewById(R.id.dialogo_nombre);
 
             }
         });
