@@ -4,7 +4,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+    DaoContacto daoContacto;
+    Adapter adapter;
+    ArrayList<Contacto> lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
