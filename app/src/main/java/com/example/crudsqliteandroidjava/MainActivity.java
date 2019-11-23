@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
@@ -44,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
         imgAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment vm;
-                Dialog dialog = new Dialog(MainActivity.this);
+                final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setTitle("Nuevo Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
@@ -58,31 +58,31 @@ public class MainActivity extends AppCompatActivity {
                 final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
                 final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
 
-//                dialog.dialogo_agregar.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        try {
-//                            contacto = new Contacto(
-//                                    dialogo_nombre.getText().toString(),
-//                                    dialogo_telefono.getText().toString(),
-//                                    dialogo_email.getText().toString(),
-//                                    Integer.parseInt(dialogo_edad.getText().toString()));
-//
-//                            daoContacto.insertar(contacto);
-//                            adapter.notifyDataSetChanged();
-//                            dialog.dismiss();
-//                        } catch (Exception e) {
-//                            Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
+                dialogo_agregar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            contacto = new Contacto(
+                                    dialogo_nombre.getText().toString(),
+                                    dialogo_telefono.getText().toString(),
+                                    dialogo_email.getText().toString(),
+                                    Integer.parseInt(dialogo_edad.getText().toString()));
 
-//                dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        dialog.dismiss();
-//                    }
-//                });
+                            daoContacto.insertar(contacto);
+                            adapter.notifyDataSetChanged();
+                            dialog.dismiss();
+                        } catch (Exception e) {
+                            Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
             }
         });
 
