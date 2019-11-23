@@ -10,5 +10,9 @@ public class daoContacto {
     ArrayList<Contacto> lista;
     Contacto contacto;
     Context context;
+    String nombreDB = "BDContactos";
+    String tabla = "create table if not exists contacto(id integer primary key autoincrement, nombre text, telefono text, email text, edad integer)";
+
+
 
 }
