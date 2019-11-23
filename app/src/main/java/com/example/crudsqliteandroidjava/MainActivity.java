@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 EditText dialogo_email = (EditText) findViewById(R.id.dialogo_email);
                 EditText dialogo_edad = (EditText) findViewById(R.id.dialogo_edad);
 
+                Button dialogo_agregar =(Button)findViewById(R.id.dialogo_agregar);
+                Button dialogo_cancelar =(Button)findViewById(R.id.dialogo_cancelar);
             }
         });
 
