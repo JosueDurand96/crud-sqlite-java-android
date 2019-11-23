@@ -10,14 +10,18 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.ContentView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.DialogCompat;
+import androidx.fragment.app.DialogFragment;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     DaoContacto daoContacto;
     Adapter adapter;
-    ArrayList<Contacto> lista;
+    ArrayList<Contacto> lista = new ArrayList<Contacto>();
     Contacto contacto;
 
     @Override
@@ -57,31 +61,31 @@ public class MainActivity extends AppCompatActivity {
                 Button dialogo_agregar = (Button) findViewById(R.id.dialogo_agregar);
                 Button dialogo_cancelar = (Button) findViewById(R.id.dialogo_cancelar);
 
-                dialogo_agregar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        try {
-                            contacto = new Contacto(
-                                    dialogo_nombre.getText().toString(),
-                                    dialogo_telefono.getText().toString(),
-                                    dialogo_email.getText().toString(),
-                                    Integer.parseInt(dialogo_edad.getText().toString()));
+//                dialog.dialogo_agregar.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        try {
+//                            contacto = new Contacto(
+//                                    dialogo_nombre.getText().toString(),
+//                                    dialogo_telefono.getText().toString(),
+//                                    dialogo_email.getText().toString(),
+//                                    Integer.parseInt(dialogo_edad.getText().toString()));
+//
+//                            daoContacto.insertar(contacto);
+//                            adapter.notifyDataSetChanged();
+//                            dialog.dismiss();
+//                        } catch (Exception e) {
+//                            Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
 
-                            daoContacto.insertar(contacto);
-                            adapter.notifyDataSetChanged();
-                            dialog.dismiss();
-                        } catch (Exception e) {
-                            Toast.makeText(MainActivity.this, "Error amiguito...!!", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-                dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
+//                dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        dialog.dismiss();
+//                    }
+//                });
             }
         });
 

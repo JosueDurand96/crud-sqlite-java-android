@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class Adapter extends BaseAdapter {
-    ArrayList<Contacto> lista;
+    ArrayList<Contacto> lista= new ArrayList<Contacto>();
     DaoContacto daoContacto;
     Contacto contacto;
     Activity activity;

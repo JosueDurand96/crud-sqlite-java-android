@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class DaoContacto {
     SQLiteDatabase sqLiteDatabase;
-    ArrayList<Contacto> lista;
+    ArrayList<Contacto> lista= new ArrayList<Contacto>();
     Contacto contacto;
     Context context;
     String nombreDB = "BDContactos";
@@ -16,7 +16,7 @@ public class DaoContacto {
 
     public DaoContacto(Context context) {
         this.context = context;
-        sqLiteDatabase = context.openOrCreateDatabase(nombreDB, Context.MODE_WORLD_WRITEABLE, null);
+        sqLiteDatabase = context.openOrCreateDatabase(nombreDB, Context.MODE_PRIVATE, null);
         sqLiteDatabase.execSQL(tabla);
     }
 
