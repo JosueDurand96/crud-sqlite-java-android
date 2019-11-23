@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
                 dialog.show();
-                EditText dialogo_nombre = (EditText) findViewById(R.id.dialogo_nombre);
-                EditText dialogo_telefono = (EditText) findViewById(R.id.dialogo_telefono);
-                EditText dialogo_email = (EditText) findViewById(R.id.dialogo_email);
-                EditText dialogo_edad = (EditText) findViewById(R.id.dialogo_edad);
+                final EditText dialogo_nombre = (EditText) findViewById(R.id.dialogo_nombre);
+                final EditText dialogo_telefono = (EditText) findViewById(R.id.dialogo_telefono);
+                final EditText dialogo_email = (EditText) findViewById(R.id.dialogo_email);
+                final EditText dialogo_edad = (EditText) findViewById(R.id.dialogo_edad);
 
                 Button dialogo_agregar = (Button) findViewById(R.id.dialogo_agregar);
                 Button dialogo_cancelar = (Button) findViewById(R.id.dialogo_cancelar);
