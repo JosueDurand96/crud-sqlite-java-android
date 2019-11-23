@@ -13,8 +13,9 @@ public class daoContacto {
     String nombreDB = "BDContactos";
     String tabla = "create table if not exists contacto(id integer primary key autoincrement, nombre text, telefono text, email text, edad integer)";
 
-    public daoContacto(Context context){
-        this.context = context;
-
+    public daoContacto(Context ctx){
+        this.context = ctx;
+        sqLiteDatabase = ctx.openOrCreateDatabase(nombreDB,Context.MODE_WORLD_WRITEABLE,null);
+        sqLiteDatabase.execSQL(tabla);
     }
 }
