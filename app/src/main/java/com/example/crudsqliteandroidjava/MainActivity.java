@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     DaoContacto daoContacto;
     Adapter adapter;
     ArrayList<Contacto> lista;
-
+    Contacto contacto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
