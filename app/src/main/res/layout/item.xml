@@ -10,13 +10,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/t_nombre"
+            android:id="@+id/item_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre" />
 
         <TextView
-            android:id="@+id/t_edad"
+            android:id="@+id/item_edad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edad" />
@@ -29,13 +29,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/t_telefono"
+            android:id="@+id/item_telefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Telefono" />
 
         <TextView
-            android:id="@+id/t_email"
+            android:id="@+id/item_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email" />
@@ -48,13 +48,13 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/editar"
+            android:id="@+id/item_btneditar"
             android:layout_width="69dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_edit_black_24dp" />
 
         <ImageView
-            android:id="@+id/eliminar"
+            android:id="@+id/item_btneliminar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_delete_black_24dp" />

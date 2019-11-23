@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -45,7 +46,16 @@ public class Adapter extends BaseAdapter {
         View v = view;
         if (v!=null){
             LayoutInflater layoutInflater =(LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            v=layoutInflater.inflate(R.layout.item,null);
         }
-        return null;
+        contacto=lista.get(position);
+        TextView txtnombre=(TextView)view.findViewById(R.id.item_nombre);
+        TextView txttelefono=(TextView)view.findViewById(R.id.item_telefono);
+        TextView txtemail=(TextView)view.findViewById(R.id.item_email);
+        TextView txtedad=(TextView)view.findViewById(R.id.item_edad);
+
+
+
+        return v;
     }
 }
