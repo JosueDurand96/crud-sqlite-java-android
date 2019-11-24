@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -85,6 +86,19 @@ public class Adapter extends BaseAdapter {
                 dialogo_telefono.setText(contacto.getTelefono());
                 dialogo_email.setText(contacto.getEmail());
                 dialogo_edad.setText("" + contacto.getEdad());
+                dialogo_agregar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            contacto=new Contacto(dialogo_nombre.getText().toString(),
+                                    dialogo_telefono.getText().toString(),
+                                    dialogo_email.getText().toString(),
+                                    Integer.parseInt(dialogo_edad.getText().toString()));
+                        }catch (Exception e){
+                            Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
 
             }
         });
