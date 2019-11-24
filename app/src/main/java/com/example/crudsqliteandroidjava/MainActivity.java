@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 final EditText dialogo_edad = (EditText) dialog.findViewById(R.id.dialogo_edad);
                 final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
                 final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
-
+                dialogo_agregar.setText("Agregar Nuevo Usuario");
                 dialogo_agregar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
