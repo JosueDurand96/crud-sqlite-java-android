@@ -32,7 +32,8 @@ public class DaoContacto {
     }
 
     public boolean eliminar(int id) {
-        return true;
+
+        return (sqLiteDatabase.delete("contacto", "id=" + id, null)) > 0;
     }
 
 
