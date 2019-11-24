@@ -5,6 +5,8 @@
     android:gravity="center"
     android:orientation="vertical">
 
+
+
     <EditText
         android:id="@+id/dialogo_nombre"
         android:text="Nombre"
