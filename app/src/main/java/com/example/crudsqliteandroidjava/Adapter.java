@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -132,6 +133,13 @@ public class Adapter extends BaseAdapter {
             public void onClick(View v) {
                 AlertDialog.Builder alertBuild = new AlertDialog.Builder(activity);
                 alertBuild.setMessage("¿Desea eliminar este registro?");
+                alertBuild.setCancelable(false);
+                alertBuild.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
 
             }
         });
