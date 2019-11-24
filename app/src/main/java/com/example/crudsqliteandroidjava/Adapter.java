@@ -20,6 +20,15 @@ public class Adapter extends BaseAdapter {
     DaoContacto daoContacto;
     Contacto contacto;
     Activity activity;
+    int id= 0;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Adapter(Activity activity, ArrayList<Contacto> lista, DaoContacto daoContacto) {
         this.lista = lista;
