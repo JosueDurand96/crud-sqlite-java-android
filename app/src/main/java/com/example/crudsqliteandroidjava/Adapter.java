@@ -131,8 +131,8 @@ public class Adapter extends BaseAdapter {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-                int pos =Integer.parseInt(view.getTag().toString());
-                contacto=lista.get(pos);
+                int pos = Integer.parseInt(view.getTag().toString());
+                contacto = lista.get(pos);
                 setId(contacto.getId());
 
                 AlertDialog.Builder alertBuild = new AlertDialog.Builder(activity);
@@ -143,7 +143,7 @@ public class Adapter extends BaseAdapter {
                     public void onClick(DialogInterface dialog, int which) {
 
                         daoContacto.eliminar(getId());
-                        lista=daoContacto.verTodos();
+                        lista = daoContacto.verTodos();
                         notifyDataSetChanged();
 
                     }
@@ -154,6 +154,7 @@ public class Adapter extends BaseAdapter {
 
                     }
                 });
+                alertBuild.show();
 
             }
         });
