@@ -96,6 +96,7 @@ public class Adapter extends BaseAdapter {
                 dialogo_telefono.setText(contacto.getTelefono());
                 dialogo_email.setText(contacto.getEmail());
                 dialogo_edad.setText("" + contacto.getEdad());
+                dialogo_agregar.setText("Guardar");
                 dialogo_agregar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
