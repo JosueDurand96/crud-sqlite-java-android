@@ -59,10 +59,10 @@ public class Adapter extends BaseAdapter {
         TextView txtedad = (TextView) v.findViewById(R.id.item_edad);
         ImageView btneditar = (ImageView) v.findViewById(R.id.item_btneditar);
         ImageView btnEliminar = (ImageView) v.findViewById(R.id.item_btneliminar);
-        txtnombre.setText(contacto.nombre);
-        txttelefono.setText(contacto.telefono);
-        txtemail.setText(contacto.email);
-        txtedad.setText("" + contacto.edad);
+        txtnombre.setText(contacto.getNombre());
+        txttelefono.setText(contacto.getTelefono());
+        txtemail.setText(contacto.getEmail());
+        txtedad.setText("" + contacto.getEdad());
         btneditar.setTag(position);
         btnEliminar.setTag(position);
         btneditar.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +73,7 @@ public class Adapter extends BaseAdapter {
                 dialog.setTitle("Editar Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
-
+                contacto=lista.get(pos);
                 dialog.show();
                 final EditText dialogo_nombre = (EditText) dialog.findViewById(R.id.dialogo_nombre);
                 final EditText dialogo_telefono = (EditText) dialog.findViewById(R.id.dialogo_telefono);
