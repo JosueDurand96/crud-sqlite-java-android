@@ -1,11 +1,14 @@
 package com.example.crudsqliteandroidjava;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,7 +46,7 @@ public class Adapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View view, ViewGroup parent) {
+    public View getView(int position, final View view, ViewGroup parent) {
         View v = view;
         if (v == null) {
             LayoutInflater layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -65,7 +68,19 @@ public class Adapter extends BaseAdapter {
         btneditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int pos=Integer.parseInt(view.getTag().toString());
+                final Dialog dialog = new Dialog(activity);
+                dialog.setTitle("Editar Registro");
+                dialog.setCancelable(true);
+                dialog.setContentView(R.layout.dialogo);
 
+                dialog.show();
+                final EditText dialogo_nombre = (EditText) dialog.findViewById(R.id.dialogo_nombre);
+                final EditText dialogo_telefono = (EditText) dialog.findViewById(R.id.dialogo_telefono);
+                final EditText dialogo_email = (EditText) dialog.findViewById(R.id.dialogo_email);
+                final EditText dialogo_edad = (EditText) dialog.findViewById(R.id.dialogo_edad);
+                final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
+                final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
             }
         });
         btnEliminar.setOnClickListener(new View.OnClickListener() {
