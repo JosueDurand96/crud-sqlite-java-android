@@ -68,12 +68,11 @@ public class Adapter extends BaseAdapter {
         btneditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int pos=Integer.parseInt(view.getTag().toString());
+                int pos = Integer.parseInt(view.getTag().toString());
                 final Dialog dialog = new Dialog(activity);
                 dialog.setTitle("Editar Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
-                contacto=lista.get(pos);
                 dialog.show();
                 final EditText dialogo_nombre = (EditText) dialog.findViewById(R.id.dialogo_nombre);
                 final EditText dialogo_telefono = (EditText) dialog.findViewById(R.id.dialogo_telefono);
@@ -81,6 +80,7 @@ public class Adapter extends BaseAdapter {
                 final EditText dialogo_edad = (EditText) dialog.findViewById(R.id.dialogo_edad);
                 final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
                 final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
+                contacto = lista.get(pos);
             }
         });
         btnEliminar.setOnClickListener(new View.OnClickListener() {
