@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setTitle("Nuevo Registro");
                 dialog.setCancelable(true);
                 dialog.setContentView(R.layout.dialogo);
-
                 dialog.show();
                 final EditText dialogo_nombre = (EditText) dialog.findViewById(R.id.dialogo_nombre);
                 final EditText dialogo_telefono = (EditText) dialog.findViewById(R.id.dialogo_telefono);
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                                     Integer.parseInt(dialogo_edad.getText().toString()));
 
                             daoContacto.insertar(contacto);
-                            lista=daoContacto.verTodos();
+                            lista = daoContacto.verTodos();
                             adapter.notifyDataSetChanged();
                             dialog.dismiss();
                         } catch (Exception e) {
