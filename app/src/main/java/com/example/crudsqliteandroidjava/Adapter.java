@@ -1,6 +1,7 @@
 package com.example.crudsqliteandroidjava;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -129,7 +130,7 @@ public class Adapter extends BaseAdapter {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                AlertDialog.Builder alertBuild = new AlertDialog.Builder(activity);
             }
         });
 
