@@ -78,7 +78,7 @@ public class Adapter extends BaseAdapter {
         btneditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int pos = Integer.parseInt(view.getTag().toString());
+                int pos = Integer.parseInt(v.getTag().toString());
                 final Dialog dialog = new Dialog(activity);
                 dialog.setTitle("Editar Registro");
                 dialog.setCancelable(true);
