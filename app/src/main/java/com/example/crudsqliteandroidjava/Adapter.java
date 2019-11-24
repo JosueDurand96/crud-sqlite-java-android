@@ -81,6 +81,11 @@ public class Adapter extends BaseAdapter {
                 final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
                 final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
                 contacto = lista.get(pos);
+                dialogo_nombre.setText(contacto.getNombre());
+                dialogo_telefono.setText(contacto.getTelefono());
+                dialogo_email.setText(contacto.getEmail());
+                dialogo_edad.setText("" + contacto.getEdad());
+
             }
         });
         btnEliminar.setOnClickListener(new View.OnClickListener() {
