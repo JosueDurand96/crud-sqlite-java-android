@@ -30,18 +30,28 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <EditText
-        android:id="@+id/dialogo_email"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Correo" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/dialogo_edad"
+        <EditText
+            android:id="@+id/dialogo_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edad" />
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/dialogo_edad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edad" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
