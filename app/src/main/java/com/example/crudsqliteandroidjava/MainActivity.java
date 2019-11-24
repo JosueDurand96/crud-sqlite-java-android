@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    DbContacto daoContacto;
+    DBContacto daoContacto;
     Adapter adapter;
     ArrayList<Contacto> lista = new ArrayList<Contacto>();
     Contacto contacto;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        daoContacto = new DbContacto(MainActivity.this);
+        daoContacto = new DBContacto(MainActivity.this);
         lista = daoContacto.verTodos();
         adapter = new Adapter(this, lista, daoContacto);
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 final EditText dialogo_edad = (EditText) dialog.findViewById(R.id.dialogo_edad);
                 final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
                 final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
-                dialogo_agregar.setText("Agregar Nuevo Usuario");
+                dialogo_agregar.setText("Agregar");
                 dialogo_agregar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

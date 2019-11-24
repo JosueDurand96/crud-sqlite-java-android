@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class Adapter extends BaseAdapter {
     ArrayList<Contacto> lista = new ArrayList<Contacto>();
-    DbContacto daoContacto;
+    DBContacto daoContacto;
     Contacto contacto;
     Activity activity;
     int id = 0;
@@ -32,7 +32,7 @@ public class Adapter extends BaseAdapter {
         this.id = id;
     }
 
-    public Adapter(Activity activity, ArrayList<Contacto> lista, DbContacto daoContacto) {
+    public Adapter(Activity activity, ArrayList<Contacto> lista, DBContacto daoContacto) {
         this.lista = lista;
         this.activity = activity;
         this.daoContacto = daoContacto;

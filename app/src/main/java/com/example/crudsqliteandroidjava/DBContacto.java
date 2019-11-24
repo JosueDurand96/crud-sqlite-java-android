@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-public class DbContacto {
+public class DBContacto {
     SQLiteDatabase sqLiteDatabase;
     ArrayList<Contacto> lista = new ArrayList<Contacto>();
     Contacto contacto;
@@ -15,7 +15,7 @@ public class DbContacto {
     String nombreDB = "BDContactos";
     String tabla = "create table if not exists contacto(id integer primary key autoincrement, nombre text, telefono text, email text, edad integer)";
 
-    public DbContacto(Context context) {
+    public DBContacto(Context context) {
         this.context = context;
         sqLiteDatabase = context.openOrCreateDatabase(nombreDB, Context.MODE_PRIVATE, null);
         sqLiteDatabase.execSQL(tabla);
