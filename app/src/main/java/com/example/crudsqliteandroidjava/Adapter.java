@@ -130,7 +130,8 @@ public class Adapter extends BaseAdapter {
         });
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View view) {
+                int pos =Integer.parseInt(view.getTag().toString());
                 AlertDialog.Builder alertBuild = new AlertDialog.Builder(activity);
                 alertBuild.setMessage("¿Desea eliminar este registro?");
                 alertBuild.setCancelable(false);
