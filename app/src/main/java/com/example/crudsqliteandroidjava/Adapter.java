@@ -132,12 +132,19 @@ public class Adapter extends BaseAdapter {
             @Override
             public void onClick(final View view) {
                 int pos =Integer.parseInt(view.getTag().toString());
+                contacto=lista.get(pos);
+                setId(contacto.getId());
+
                 AlertDialog.Builder alertBuild = new AlertDialog.Builder(activity);
                 alertBuild.setMessage("¿Desea eliminar este registro?");
                 alertBuild.setCancelable(false);
                 alertBuild.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+                        daoContacto.eliminar(getId());
+                        lista=daoContacto.verTodos();
+                        notifyDataSetChanged();
 
                     }
                 });
