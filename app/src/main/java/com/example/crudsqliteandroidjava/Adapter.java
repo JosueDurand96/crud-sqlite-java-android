@@ -103,6 +103,12 @@ public class Adapter extends BaseAdapter {
                         }
                     }
                 });
+                dialogo_cancelar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
 
             }
         });
