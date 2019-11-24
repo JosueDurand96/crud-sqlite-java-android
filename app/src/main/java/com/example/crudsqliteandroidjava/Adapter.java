@@ -131,6 +131,8 @@ public class Adapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertBuild = new AlertDialog.Builder(activity);
+                alertBuild.setMessage("¿Desea eliminar este registro?");
+
             }
         });
 
