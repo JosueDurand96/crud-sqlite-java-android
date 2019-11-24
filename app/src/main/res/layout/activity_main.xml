@@ -11,15 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Agregar un nuevo reegistro Please"
+            android:textColor="@color/colorPrimary" />
 
 
-            <ImageView
-                android:id="@+id/imgAgregar"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                app:srcCompat="@drawable/ic_add_black_24dp" />
-
+        <ImageView
+            android:id="@+id/imgAgregar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/ic_add_black_24dp" />
 
 
     </LinearLayout>
