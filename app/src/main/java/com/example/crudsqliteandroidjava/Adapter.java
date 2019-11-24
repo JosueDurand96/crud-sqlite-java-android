@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class Adapter extends BaseAdapter {
-    ArrayList<Contacto> lista= new ArrayList<Contacto>();
+    ArrayList<Contacto> lista = new ArrayList<Contacto>();
     DaoContacto daoContacto;
     Contacto contacto;
     Activity activity;
@@ -50,7 +50,7 @@ public class Adapter extends BaseAdapter {
             v = layoutInflater.inflate(R.layout.item, null);
         }
         contacto = lista.get(position);
-         TextView txtnombre = (TextView) v.findViewById(R.id.item_nombre);
+        TextView txtnombre = (TextView) v.findViewById(R.id.item_nombre);
         TextView txttelefono = (TextView) v.findViewById(R.id.item_telefono);
         TextView txtemail = (TextView) v.findViewById(R.id.item_email);
         TextView txtedad = (TextView) v.findViewById(R.id.item_edad);
@@ -59,7 +59,9 @@ public class Adapter extends BaseAdapter {
         txtnombre.setText(contacto.nombre);
         txttelefono.setText(contacto.telefono);
         txtemail.setText(contacto.email);
-        txtedad.setText(""+contacto.edad);
+        txtedad.setText("" + contacto.edad);
+        btneditar.setTag(position);
+        btnEliminar.setTag(position);
         btneditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
