@@ -37,7 +37,13 @@ public class DaoContacto {
 
 
     public boolean editar(Contacto contacto) {
-        return true;
+        ContentValues contenedor = new ContentValues();
+        contenedor.put("nombre", contacto.getNombre());
+        contenedor.put("telefono", contacto.getTelefono());
+        contenedor.put("email", contacto.getEmail());
+        contenedor.put("edad", contacto.getEdad());
+
+        return (sqLiteDatabase.update("contacto", contenedor, "id=" + contacto.getId(), null)) > 0;
     }
 
     public ArrayList<Contacto> verTodos() {
@@ -59,7 +65,7 @@ public class DaoContacto {
     public Contacto verUno(int position) {
         Cursor cursor = sqLiteDatabase.rawQuery("select * from contacto", null);
         cursor.moveToPosition(position);
-        contacto=new Contacto(cursor.getInt(0),
+        contacto = new Contacto(cursor.getInt(0),
                 cursor.getString(1),
                 cursor.getString(2),
                 cursor.getString(3),
