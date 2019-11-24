@@ -11,12 +11,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    DaoContacto daoContacto;
+    DbContacto daoContacto;
     Adapter adapter;
     ArrayList<Contacto> lista = new ArrayList<Contacto>();
     Contacto contacto;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        daoContacto = new DaoContacto(MainActivity.this);
+        daoContacto = new DbContacto(MainActivity.this);
         lista = daoContacto.verTodos();
         adapter = new Adapter(this, lista, daoContacto);
 
