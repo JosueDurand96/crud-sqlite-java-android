@@ -65,6 +65,8 @@
             android:id="@+id/dialogo_agregar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:text="Agregar">
 
         </Button>
@@ -74,6 +76,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:text="Cancelar" />
 
     </LinearLayout>
