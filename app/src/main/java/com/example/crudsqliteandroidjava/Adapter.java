@@ -20,7 +20,7 @@ public class Adapter extends BaseAdapter {
     DaoContacto daoContacto;
     Contacto contacto;
     Activity activity;
-    int id= 0;
+    int id = 0;
 
     public int getId() {
         return id;
@@ -91,6 +91,7 @@ public class Adapter extends BaseAdapter {
                 final Button dialogo_agregar = (Button) dialog.findViewById(R.id.dialogo_agregar);
                 final Button dialogo_cancelar = (Button) dialog.findViewById(R.id.dialogo_cancelar);
                 contacto = lista.get(pos);
+                setId(contacto.getId());
                 dialogo_nombre.setText(contacto.getNombre());
                 dialogo_telefono.setText(contacto.getTelefono());
                 dialogo_email.setText(contacto.getEmail());
@@ -99,12 +100,15 @@ public class Adapter extends BaseAdapter {
                     @Override
                     public void onClick(View v) {
                         try {
-                            contacto = new Contacto(dialogo_nombre.getText().toString(),
+                            contacto = new Contacto(
+                                    getId(),
+                                    dialogo_nombre.getText().toString(),
                                     dialogo_telefono.getText().toString(),
                                     dialogo_email.getText().toString(),
                                     Integer.parseInt(dialogo_edad.getText().toString()));
                             daoContacto.editar(contacto);
-                            lista=daoContacto.verTodos();
+                            lista = daoContacto.verTodos();
+                            notifyDataSetChanged();
                             dialog.dismiss();
 
                         } catch (Exception e) {
