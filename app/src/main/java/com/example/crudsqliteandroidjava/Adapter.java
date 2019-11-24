@@ -95,6 +95,8 @@ public class Adapter extends BaseAdapter {
                                     dialogo_email.getText().toString(),
                                     Integer.parseInt(dialogo_edad.getText().toString()));
                             daoContacto.editar(contacto);
+                            lista=daoContacto.verTodos();
+                            dialog.dismiss();
 
                         } catch (Exception e) {
                             Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
